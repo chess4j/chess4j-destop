@@ -1,0 +1,25 @@
+
+.root {
+    -fx-background: #444444
+}
+
+Label {
+    -fx-font-size: 40px;
+    -fx-pref-width: 100px;
+    -fx-pref-height: 100px;
+    -fx-alignment: center;
+    -fx-text-inner-color: #082c6c;
+}
+
+.white-tile {
+    -fx-background-color: #bebebe;
+}
+
+.black-tile {
+    -fx-background-color: #878683;
+}
+
+.white-tile, .black-tile {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 100px;
+}

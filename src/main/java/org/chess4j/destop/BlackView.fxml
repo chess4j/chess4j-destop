@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" prefWidth="1000" prefHeight="1000" fx:controller="org.chess4j.destop.Controller" xmlns:fx="http://javafx.com/fxml">
+
+    <HBox alignment="CENTER">
+        <Label></Label>
+        <Button />
+        <Button />
+        <Button />
+        <Button />
+    </HBox>
+</VBox>
+
