@@ -12,129 +12,211 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.paint.Color?>
 
-<VBox alignment="CENTER" prefWidth="1000" prefHeight="1000" fx:controller="org.chess4j.destop.Controller" xmlns:fx="http://javafx.com/fxml">
-
-    <HBox alignment="CENTER">
-        <Label></Label>
-        <Label>A</Label>
-        <Label>B</Label>
-        <Label>C</Label>
-        <Label>D</Label>
-        <Label>E</Label>
-        <Label>F</Label>
-        <Label>G</Label>
-        <Label>H</Label>
-        <Label></Label>
-    </HBox>
-    <HBox alignment="CENTER">
-        <Label>8</Label>
-        <Button id="a8" styleClass="white-tile"/>
-        <Button id="b8" styleClass="black-tile"/>
-        <Button id="c8" styleClass="white-tile"/>
-        <Button id="d8" styleClass="black-tile"/>
-        <Button id="e8" styleClass="white-tile"/>
-        <Button id="f8" styleClass="black-tile"/>
-        <Button id="g8" styleClass="white-tile"/>
-        <Button id="h8" styleClass="black-tile"/>
-        <Label>8</Label>
-    </HBox>
-    <HBox alignment="CENTER">
-        <Label>7</Label>
-        <Button id="a7" styleClass="black-tile"/>
-        <Button id="b7" styleClass="white-tile"/>
-        <Button id="c7" styleClass="black-tile"/>
-        <Button id="d7" styleClass="white-tile"/>
-        <Button id="e7" styleClass="black-tile"/>
-        <Button id="f7" styleClass="white-tile"/>
-        <Button id="g7" styleClass="black-tile"/>
-        <Button id="h7" styleClass="white-tile"/>
-        <Label>7</Label>
-    </HBox>
-    <HBox alignment="CENTER">
-        <Label>6</Label>
-        <Button id="a6" styleClass="white-tile"/>
-        <Button id="b6" styleClass="black-tile"/>
-        <Button id="c6" styleClass="white-tile"/>
-        <Button id="d6" styleClass="black-tile"/>
-        <Button id="e6" styleClass="white-tile"/>
-        <Button id="f6" styleClass="black-tile"/>
-        <Button id="g6" styleClass="white-tile"/>
-        <Button id="h6" styleClass="black-tile"/>
-        <Label>6</Label>
-    </HBox>
-    <HBox alignment="CENTER">
-        <Label>5</Label>
-        <Button id="a5" styleClass="black-tile"/>
-        <Button id="b5" styleClass="white-tile"/>
-        <Button id="c5" styleClass="black-tile"/>
-        <Button id="d5" styleClass="white-tile"/>
-        <Button id="e5" styleClass="black-tile"/>
-        <Button id="f5" styleClass="white-tile"/>
-        <Button id="g5" styleClass="black-tile"/>
-        <Button id="h5" styleClass="white-tile"/>
-        <Label>5</Label>
-    </HBox>
-    <HBox alignment="CENTER">
-        <Label>4</Label>
-        <Button id="a4" styleClass="white-tile"/>
-        <Button id="b4" styleClass="black-tile"/>
-        <Button id="c4" styleClass="white-tile"/>
-        <Button id="d4" styleClass="black-tile"/>
-        <Button id="e4" styleClass="white-tile"/>
-        <Button id="f4" styleClass="black-tile"/>
-        <Button id="g4" styleClass="white-tile"/>
-        <Button id="h4" styleClass="black-tile"/>
-        <Label>4</Label>
-    </HBox>
-    <HBox alignment="CENTER">
-        <Label>3</Label>
-        <Button id="a3" styleClass="black-tile"/>
-        <Button id="b3" styleClass="white-tile"/>
-        <Button id="c3" styleClass="black-tile"/>
-        <Button id="d3" styleClass="white-tile"/>
-        <Button id="e3" styleClass="black-tile"/>
-        <Button id="f3" styleClass="white-tile"/>
-        <Button id="g3" styleClass="black-tile"/>
-        <Button id="h3" styleClass="white-tile"/>
-        <Label>3</Label>
-    </HBox>
-    <HBox alignment="CENTER">
-        <Label>2</Label>
-        <Button id="a2" styleClass="white-tile"/>
-        <Button id="b2" styleClass="black-tile"/>
-        <Button id="c2" styleClass="white-tile"/>
-        <Button id="d2" styleClass="black-tile"/>
-        <Button id="e2" styleClass="white-tile"/>
-        <Button id="f2" styleClass="black-tile"/>
-        <Button id="g2" styleClass="white-tile"/>
-        <Button id="h2" styleClass="black-tile"/>
-        <Label>2</Label>
-    </HBox>
-    <HBox alignment="CENTER">
-        <Label>1</Label>
-        <Button id="a1" styleClass="black-tile"/>
-        <Button id="b1" styleClass="white-tile"/>
-        <Button id="c1" styleClass="black-tile"/>
-        <Button id="d1" styleClass="white-tile"/>
-        <Button id="e1" styleClass="black-tile"/>
-        <Button id="f1" styleClass="white-tile"/>
-        <Button id="g1" styleClass="black-tile"/>
-        <Button id="h1" styleClass="white-tile"/>
-        <Label>1</Label>
-    </HBox>
-    <HBox alignment="CENTER">
-        <Label></Label>
-        <Label>A</Label>
-        <Label>B</Label>
-        <Label>C</Label>
-        <Label>D</Label>
-        <Label>E</Label>
-        <Label>F</Label>
-        <Label>G</Label>
-        <Label>H</Label>
-        <Label></Label>
-    </HBox>
+<BorderPane prefWidth="1000" prefHeight="1000"
+    minHeight="1000" minWidth="1000"
+    fx:controller="org.chess4j.destop.Controller"
+    xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <HBox>
+            <Label></Label>
+            <Label>A</Label>
+            <Label>B</Label>
+            <Label>C</Label>
+            <Label>D</Label>
+            <Label>E</Label>
+            <Label>F</Label>
+            <Label>G</Label>
+            <Label>H</Label>
+            <Label></Label>
+        </HBox>
+    </top>
+    <left>
+        <VBox>
+            <Label>8</Label>
+            <Label>7</Label>
+            <Label>6</Label>
+            <Label>5</Label>
+            <Label>4</Label>
+            <Label>3</Label>
+            <Label>2</Label>
+            <Label>1</Label>
+        </VBox>
+    </left>
+    <center>
+        <VBox fx:id="board">
+            <HBox alignment="CENTER">
+                <Button id="a8" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="b8" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="c8" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="d8" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="e8" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="f8" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="g8" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="h8" styleClass="black-tile"
+                    onAction="#processInput" />
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button id="a7" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="b7" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="c7" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="d7" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="e7" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="f7" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="g7" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="h7" styleClass="white-tile"
+                    onAction="#processInput" />
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button id="a6" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="b6" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="c6" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="d6" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="e6" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="f6" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="g6" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="h6" styleClass="black-tile"
+                    onAction="#processInput" />
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button id="a5" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="b5" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="c5" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="d5" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="e5" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="f5" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="g5" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="h5" styleClass="white-tile"
+                    onAction="#processInput" />
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button id="a4" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="b4" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="c4" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="d4" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="e4" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="f4" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="g4" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="h4" styleClass="black-tile"
+                    onAction="#processInput" />
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button id="a3" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="b3" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="c3" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="d3" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="e3" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="f3" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="g3" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="h3" styleClass="white-tile"
+                    onAction="#processInput" />
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button id="a2" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="b2" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="c2" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="d2" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="e2" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="f2" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="g2" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="h2" styleClass="black-tile"
+                    onAction="#processInput" />
+            </HBox>
+            <HBox alignment="CENTER">
+                <Button id="a1" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="b1" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="c1" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="d1" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="e1" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="f1" styleClass="white-tile"
+                    onAction="#processInput" />
+                <Button id="g1" styleClass="black-tile"
+                    onAction="#processInput" />
+                <Button id="h1" styleClass="white-tile"
+                    onAction="#processInput" />
+            </HBox>
+        </VBox>
+    </center>
+    <right>
+        <VBox>
+            <Label>8</Label>
+            <Label>7</Label>
+            <Label>6</Label>
+            <Label>5</Label>
+            <Label>4</Label>
+            <Label>3</Label>
+            <Label>2</Label>
+            <Label>1</Label>
+        </VBox>
+    </right>
+    <bottom>
+        <HBox>
+            <Label></Label>
+            <Label>A</Label>
+            <Label>B</Label>
+            <Label>C</Label>
+            <Label>D</Label>
+            <Label>E</Label>
+            <Label>F</Label>
+            <Label>G</Label>
+            <Label>H</Label>
+            <Label></Label>
+        </HBox>
+    </bottom>
     <stylesheets>
-      <URL value="@Style.css" />
-   </stylesheets>
-</VBox>
+        <URL value="@Style.css" />
+    </stylesheets>
+</BorderPane>

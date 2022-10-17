@@ -15,8 +15,8 @@ public class Chess4jDestop extends Application {
         primaryStage.setTitle("Chess4j");
 
         Parent root = FXMLLoader.load(Chess4jDestop.class.getResource("WhiteView.fxml"));
-        primaryStage.setScene(new Scene(root, 1000, 1000));
-
+        primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }
