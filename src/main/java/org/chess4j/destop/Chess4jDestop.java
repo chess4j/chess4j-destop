@@ -14,7 +14,13 @@ public class Chess4jDestop extends Application {
     public void start(Stage primaryStage) throws IOException {
         primaryStage.setTitle("Chess4j");
 
-        Parent root = FXMLLoader.load(Chess4jDestop.class.getResource("WhiteView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("WhiteView.fxml"));
+        Parent root = loader.load();
+
+        //Now we have access to getController() through the instance... don't forget the type cast
+        Controller controller = (Controller)loader.getController();
+        controller.setPiecesOnBoard();
+
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
         primaryStage.show();
